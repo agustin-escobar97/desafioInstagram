@@ -1,6 +1,7 @@
 const express = require('express')
 const cors = require('cors')
 const res = require('express/lib/response')
+const { response } = require('express')
 const app = express()   
 const port = 3000
 
@@ -28,19 +29,7 @@ var publicaciones = [
         image : 'https://i.imgur.com/r0vgloo.jpg',
         texto : 'ur handsome',
         likes : 0
-    },
-    {
-        id : 4,
-        image : 'https://i.imgur.com/bMGaZNO.jpg',
-        texto : 'bricks',
-        likes : 0
-    },
-    {
-        id : 5,
-        image : 'https://i.imgur.com/GlIpg2b.jpg',
-        texto : 'redrum',
-        likes : 0
-    },
+    }
 ]
 
 //get todas las publicaciones
@@ -66,6 +55,16 @@ app.post('/api/publicaciones/agregarPublicacion', (req, resp)=>{
 
     publicacion.id = publicaciones.length+1
 
+    if(!publicacion.url || !publicacion.texto){
+        resp.status(400)
+        resp.send("esta intentando subir una publicacion sin url o texsto")
+    }
+
+    if(publicacion.likes != 0){
+        resp.status(400)
+        resp.send("está intentando subir una publicacion con numero de likes distinto a 0")
+    }
+
     publicaciones.push(publicacion)
 
     resp.send(publicacion)
@@ -76,9 +75,13 @@ app.post('/api/publicaciones/agregarPublicacion', (req, resp)=>{
 app.put('/api/publicaciones/darLike/:id', (req, resp)=>{
     let id = req.params.id
     let publicacion = publicaciones.find(v => v.id ===parseInt(id))
+
+    if(!publicacion){
+        resp.status(400)
+    }
     
     publicacion.likes = publicacion.likes+1
     resp.send(publicacion)
 })
 
-// https://imgur.com/a/9YzFaVy
+// https://imgur.com/a/9YzFaVy.jpg

@@ -1,10 +1,13 @@
 <template>
     <div>
-        <form>
+        <form class="subirPublicacion">
+        <p>Suba una publicacion</p>
         <label>url de la imagen</label>
         <input type="url" required v-model="publicacion.image"/>
+        <p/>
         <label>texto de la imagen</label>
         <input type=text required v-model="publicacion.texto"/>
+        <p/>
         <button v-on:click="subirPublicacion(publicacion)">Subir publicacion</button>
         </form>
     </div>

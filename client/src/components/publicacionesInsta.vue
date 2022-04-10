@@ -3,7 +3,7 @@
   <div class="publicacionesEstilo">
     <img :src="image" class="publicacionFoto"/>
     <p>{{ texto }}</p>
-    <p>{{ likes }}</p>
+    <p><font-awesome-icon :icon="['fas', 'heart']" />{{ likes }}</p>
     <button v-on:click="darLike(id)">Me gusta</button>
     <hr/>
   </div>

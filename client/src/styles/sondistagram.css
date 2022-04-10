@@ -73,3 +73,13 @@ hr{
     display: block;
     text-align: center;
 }
+
+.subirPublicacion{
+    justify-content: center;
+    text-align: center;
+}
+
+.subirPublicacion input{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
