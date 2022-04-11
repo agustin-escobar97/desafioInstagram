@@ -5,7 +5,7 @@
     
     <div class="containerPublicaciones">
     <publicacionesInsta v-for="publicacion in publicaciones"
-    v-bind:key="publicacion.id"
+     :key="publicacion.id"
      :id="publicacion.id"
      :image="publicacion.image"
      :texto="publicacion.texto"
