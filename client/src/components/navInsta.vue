@@ -1,5 +1,6 @@
 /* eslint-disable vue/multi-word-component-names */
 <template>
+<!--Template para la barra de navegación de la pagina-->
   <div>
     <body>
       <header>

@@ -1,4 +1,5 @@
 <template>
+<!--Template para visualizar las publicaciones-->
   <div></div>
   <div class="publicacionesEstilo">
     <img :src="image" class="publicacionFoto"/>
@@ -23,9 +24,6 @@ export default {
   methods: {
     darLike(id) {
       axios.put("http://localhost:3000/api/publicaciones/darLike/" + id)
-    },
-    subirPublicacion(){
-      
     }
     }
 };

@@ -1,4 +1,5 @@
 <template>
+<!--Template para subir publicaciones. esta misma se encontrará al fondo de la pagina-->
     <div>
         <form class="subirPublicacion">
         <p>Suba una publicacion</p>

@@ -1,5 +1,6 @@
-<template>
 
+<template>
+  <!--Template principal-->
   <div>
     <navInsta></navInsta>
     
