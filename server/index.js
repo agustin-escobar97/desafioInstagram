@@ -84,4 +84,4 @@ app.put('/api/publicaciones/darLike/:id', (req, resp)=>{
     resp.send(publicacion)
 })
 
-// https://imgur.com/a/9YzFaVy.jpg
+// https://i.imgur.com/f648Vth.png imagen de prueba
