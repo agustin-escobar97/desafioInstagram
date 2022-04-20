@@ -3,7 +3,7 @@
   <div></div>
   <div class="publicacionesEstilo">
     <img :src="image" class="publicacionFoto"/>
-    <p>{{ texto }}</p>
+    <p>{{ text }}</p>
     <p><font-awesome-icon :icon="['fas', 'heart']" />{{ likes }}</p>
     <button v-on:click="darLike(id)">Me gusta</button>
     <hr/>
@@ -16,14 +16,15 @@ import axios from "axios";
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: "publicacionesInsta",
-  props: ["id", "image", "texto", "likes"],
+  props: ["id", "image", "text", "likes"],
   data(){
     return{
-    nuevaPublicacion:[],
+      updatedLikes:{}
   }},
   methods: {
     darLike(id) {
       axios.put("http://localhost:3000/api/publicaciones/darLike/" + id)
+      console.log(axios.get("http://localhost:3000/api/publicaciones/" + id))
     }
     }
 };

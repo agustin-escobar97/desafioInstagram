@@ -9,7 +9,7 @@
      :key="publicacion.id"
      :id="publicacion.id"
      :image="publicacion.image"
-     :texto="publicacion.texto"
+     :text="publicacion.text"
      :likes="publicacion.likes"
      >
 

@@ -7,7 +7,7 @@
         <input type="url" required v-model="publicacion.image"/>
         <p/>
         <label>texto de la imagen</label>
-        <input type=text required v-model="publicacion.texto"/>
+        <input type=text required v-model="publicacion.text"/>
         <p/>
         <button v-on:click="subirPublicacion(publicacion)">Subir publicacion</button>
         </form>
@@ -23,7 +23,7 @@ export default{
             publicacion:{
             id: 0,
             image: null,
-            texto: null,
+            text: null,
             likes: 0
         }}
     },
