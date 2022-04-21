@@ -7,7 +7,7 @@
         <input type="url" required v-model="publicacion.image"/>
         <p/>
         <label>texto de la imagen</label>
-        <input type=text required v-model="publicacion.text"/>
+        <input type=text v-model="publicacion.text" required/>
         <p/>
         <button v-on:click="subirPublicacion(publicacion)">Subir publicacion</button>
         </form>

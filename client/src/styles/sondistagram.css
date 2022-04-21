@@ -84,12 +84,25 @@ hr{
     margin-bottom: 1em;
 }
 
-.anchorLike:visited{
-    text-decoration: none;
-}
+
 .anchorLike:link{
     text-decoration: none;
+    color:black;
 }
-a:hover {
+.anchorLike:visited{
+    text-decoration: none;
+    color: pink;
+}
+.anchorLike:focus{
+    color:pink;
+}
+
+.anchorLike:hover {
     text-decoration: none;
   }
+  
+.anchorLike:active{
+    text-decoration: none;
+    color:pink;
+}
+

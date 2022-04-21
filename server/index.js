@@ -55,19 +55,13 @@ app.post('/api/publicaciones/agregarPublicacion', (req, resp)=>{
 
     publicacion.id = publicaciones.length+1
 
-    if(!publicacion.image || !publicacion.text){
+    if((!publicacion.image || !publicacion.text) || (publicacion.likes != 0)){
         resp.status(400)
-        resp.send("esta intentando subir una publicacion sin url o texto")
+        resp.send("esta intentando subir una publicacion sin imagen o texto")
     }
+    else(publicaciones.push(publicacion))
 
-    if(publicacion.likes != 0){
-        resp.status(400)
-        resp.send("está intentando subir una publicacion con numero de likes distinto a 0")
-    }
-
-    publicaciones.push(publicacion)
-
-    resp.send(publicacion)
+    resp.send(publicaciones)
 
 })
 

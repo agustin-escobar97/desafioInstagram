@@ -44,14 +44,13 @@ export default {
   },
   methods:{
     obtenerPublicaciones(){
-      axios.get("http://localhost:3000/api/publicaciones").then((respuesta)=>{
-        this.publicaciones = respuesta.data
+      axios.get("http://localhost:3000/api/publicaciones").then((resp)=>{
+        this.publicaciones = resp.data
       })
     },
     like(id) {
-      axios.put("http://localhost:3000/api/publicaciones/darLike/" + id).then((res)=>{
-        this.publicaciones[id-1].likes = res.data.likes
-        console.log(this.publicaciones[id-1])
+      axios.put("http://localhost:3000/api/publicaciones/darLike/" + id).then((resp)=>{
+        this.publicaciones[id-1].likes = resp.data.likes
       })
    }
   },
