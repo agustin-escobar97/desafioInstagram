@@ -83,3 +83,18 @@ hr{
     margin-top: 1em;
     margin-bottom: 1em;
 }
+
+
+.anchorLike:link{
+    text-decoration: none;
+    color:black;
+}
+.anchorLike:active, .anchorLike:focus{
+    text-decoration: none;
+    color: pink;
+}
+
+.anchorLike:hover {
+    text-decoration: none;
+  }
+

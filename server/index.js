@@ -15,19 +15,19 @@ var publicaciones = [
     {
         id : 1,
         image : 'https://i.imgur.com/rlXE2LP.jpg',
-        texto : 'citricos',
+        text : 'citricos',
         likes : 0
     },
     {
         id : 2,
         image : 'https://i.imgur.com/Qxe6gau.jpg',
-        texto : 'atm flores',
+        text : 'atm flores',
         likes : 0
     },
     {
         id : 3,
         image : 'https://i.imgur.com/r0vgloo.jpg',
-        texto : 'ur handsome',
+        text : 'ur handsome',
         likes : 0
     }
 ]
@@ -55,19 +55,12 @@ app.post('/api/publicaciones/agregarPublicacion', (req, resp)=>{
 
     publicacion.id = publicaciones.length+1
 
-    if(!publicacion.url || !publicacion.texto){
+    if((!publicacion.image || !publicacion.text) || (publicacion.likes != 0)){
         resp.status(400)
-        resp.send("esta intentando subir una publicacion sin url o texsto")
+        resp.send("esta intentando subir una publicacion sin imagen, texto o con likes diferente a 0")
     }
-
-    if(publicacion.likes != 0){
-        resp.status(400)
-        resp.send("está intentando subir una publicacion con numero de likes distinto a 0")
-    }
-
-    publicaciones.push(publicacion)
-
-    resp.send(publicacion)
+    else(publicaciones.push(publicacion))
+    resp.send(publicaciones)
 
 })
 
