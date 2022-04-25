@@ -36,4 +36,4 @@ Inicializando el cliente: Vamos dentro de la carpeta "client" del proyecto y en 
 *5.Debido a falta de tiempo por el curso de data science (el cual faltan pocas clases para terminar) no pude trabajar en las demás observaciones del feedback*
 
 ## **Video demo del desafio**
-[![Desafio](https://img.youtube.com/vi/eaU85Tb9xQg/0.jpg)](https://youtu.be/eaU85Tb9xQg)
+[![Desafio](https://img.youtube.com/vi/gM59RNAhjSE/0.jpg)](https://youtu.be/gM59RNAhjSE)
